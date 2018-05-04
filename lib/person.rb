@@ -1,9 +1,8 @@
 class Person
   attr_accessor :name, :birthday, :hair_color, :eye_color, :height, :weight, :handed, :complexion, :t_shirt_size, :wrist_size, :glove_size, :pant_length, :pant_width
   
-  def initialize(name:, birthday:)
-    @name = name
-    @birthday = birthday
+  def initialize(key, value)
+    key.send(value)
   end
   
 end
